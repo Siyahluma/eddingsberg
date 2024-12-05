@@ -1,0 +1,111 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eddingsberg - Military Grade Drones</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="video-container">
+            <video autoplay muted loop id="myVideo">
+                <source src="v4.mp4" type="video/mp4">
+            </video>
+        </div>
+    
+        <nav>
+            <div class="logo">EDDINGSBERG</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    
+        <div class="content">
+            <div id="home" class="hero">
+                <h1>Advanced Military Grade Drones</h1>
+                <p>Leading the future of defense technology in Africa with cutting-edge drone manufacturing</p>
+            </div>
+    
+            <div id="products" class="products-grid">
+                <div class="product-card">
+                    <h3>Eddingsberg Scout X-1</h3>
+                    <p>Lightweight reconnaissance drone with advanced thermal imaging and 8-hour flight time</p>
+                    <p>Range: 150km | Speed: 120km/h</p>
+                </div>
+                <div class="product-card">
+                    <h3>Eddingsberg Sentinel Pro</h3>
+                    <p>Heavy-duty surveillance drone with 4K camera and encrypted communication systems</p>
+                    <p>Range: 200km | Speed: 150km/h</p>
+                </div>
+                <div class="product-card">
+                    <h3>Eddingsberg Guardian Elite</h3>
+                    <p>Combat-ready drone with modular payload system and advanced AI navigation</p>
+                    <p>Range: 300km | Speed: 180km/h</p>
+                </div>
+            </div>
+    
+            <div id="about" class="about-section">
+                <h2>About Eddingsberg</h2>
+                <p>Founded in 2015, Eddingsberg has become Malawi's leading manufacturer of military-grade unmanned aerial vehicles. Our commitment to innovation and excellence has positioned us as a trusted partner in defense technology across Africa.</p>
+                <p>With state-of-the-art facilities in Lilongwe, we combine cutting-edge technology with local expertise to deliver superior drone solutions that meet the evolving needs of modern defense forces.</p>
+                <p>Our team of engineers and technicians works tirelessly to ensure each drone meets the highest standards of quality, reliability, and performance.</p>
+            </div>
+    
+          
+        </div>
+    
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Address: 123 Drone Avenue</p>
+                    <p>Lilongwe, Malawi</p>
+                    <p>Phone: +265 1 234 5678</p>
+                    <p>Email: info@eddingsberg.com</p>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Your message" rows="4"></textarea>
+                    <button type="submit">Send Message</button>
+                </div>
+                
+                <div class="developer-info">
+                    <h3>Developer Info</h3>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://developer-portfolio.com" alt="Developer QR Code" class="qr-code">
+                    <p>Scan to view developer profile</p>
+                </div>
+            </div>
+        </footer>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('myVideo');
+                video.play().catch(function(error) {
+                    console.log("Video autoplay failed:", error);
+                });
+                
+                const form = document.querySelector('.contact-form');
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Message sent successfully!');
+                    form.reset();
+                });
+    
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+    </html>
